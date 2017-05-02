@@ -1,0 +1,86 @@
+---
+layout: default
+---
+
+<article class="row">
+        <div class="col-sm-3 rightAlign">
+          <div class="cat-list"> 
+                <ul>
+                    {% for cat in page.categories %} 
+                     <li><a href="{{ site.url }}{{base_url}}/categories/{{ cat | slugize}}/">{{cat | replace:'_',' '}}</a></li>
+                    {% endfor %}
+                </ul> 
+            </div> 
+            <div class="tags-list">
+                <ul >
+                    {% for tags in page.tags %} 
+                     <li><a href="{{ site.url }}{{base_url}}/tag/{{ tags | slugize }}/">{{tags | replace:'_',' ' }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+            {% if page.style =="article" or  page.style =="breve" or  page.style =="question"%}
+                <div  class="col-sm-9 art-content">
+                    {{page.content}}
+                </div>
+            {% else %}
+                <div class="row gal-content">
+                <div class="col-xs-12 col-md-9  col-md-offset-3">
+
+                  <div class="grid">
+
+                    <div class="grid-sizer"></div>
+                      {% assign foundImage = 0 %}
+                                  {% assign images = page.content | split:"<img " %}
+                                  {% for image in images %}
+                                    {% if image contains 'src' %}
+
+                                        {% if foundImage  < 80 %}
+                                            {% assign html = image | split:"/>" | first %}
+                                            <div class="grid-item"><img {{ html }}  /></div>{% assign foundImage = foundImage | plus:'1' %}
+                                        {% endif %}
+
+
+                                    {% endif %}
+                                  {% endfor %}
+
+                    </div>
+                    </div>
+                    </div>
+            {% endif %}
+            {% assign author = site.data.authors[page.author] %} 
+           {% if author %}
+            <div class="row">
+            <div class="auteur col-xs-4 col-xs-offset-8 ">
+                <a href="mailto:{{ author.email }}">
+                <span class="nom">{{ author.name }}</span>
+                <span class="fonction">{{ author.function }}</span>
+                </a>
+            </div>
+            </div>
+            {% endif %}
+      
+    
+            {% include link-post.html %}  
+       <div class="row">
+            <div class="social-tools  col-md-9  col-md-offset-3">
+                   <a href="https://twitter.com/intent/tweet?button_hashtag={{ page.tags[0]|url_encode }}&text={{ page.content | split:'<!--more-->' | first | strip_html | url_encode }}" class="twitter-hashtag-button" data-lang="fr" data-related="O_seeds" data-url="{{page.url | prepend: base_url | prepend: site.url }}">Tweet #{{ page.tags[0] }}</a> 
+
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+                <div class="fb-share-button" data-href="{{page.url | prepend: base_url | prepend: site.url }}" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{page.url | prepend: base_url | prepend: site.url |url_encode}}%2F&amp;src=sdkpreparse">Partager</a>
+                </div>
+                <div class="fb-follow" data-href="{{site.facebook_url}}" data-width="100" data-height="20" data-layout="button" data-size="small" data-show-faces="true"></div>
+                <div class="fb-save" data-uri="{{page.url | prepend: base_url | prepend: site.url }}" data-size="small"></div>
+                <div class="fb-quote"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class=" col-md-offset-3">
+                <div class="fb-comments" data-href="{{page.url  | prepend: base_url | prepend: site.url }}" data-numposts="8" data-width="100%"></div>
+            </div>
+        </div>
+</article>
+<script type="application/ld+json">
+            {% include metadata.json %}  
+</script>

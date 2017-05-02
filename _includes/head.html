@@ -1,0 +1,50 @@
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.filterByTag %}{{page.filterByTag}}{% elsif page.filterByCat %}{{page.filterByCat}}{% elsif paginator.previous_page  %}Archive du blog, page {{ paginator.page }} sur {{ paginator.total_pages }}{% else %}{{page.title}}{% endif %}</title>
+    <meta name="description" content="{% if paginator.previous_page and paginator.posts %}Articles du blog O'seeds : {% for post in paginator.posts %}{{post.title | strip_html | strip_newlines}}, {% endfor %}{% else %}{{ page.content | split:'<!--more-->' | first | strip_html | strip_newlines}}{% endif %}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{{ base_url  | prepend: site.url}}/libs/img/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+ {% assign author = site.data.authors[page.author] %} 
+           {% if author %}
+    <meta name="author" content="{{ author.name }}">
+            {% endif %}
+    <meta property="fb:app_id"       content="105078386623631" />
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{page.url  | prepend: base_url  | prepend: site.url }}" />
+    <meta property="og:image" content="{{ page.couverture }}" />
+    <meta property="og:description" content="{% if paginator.previous_page and paginator.posts %}Articles du blog O'seeds : {% for post in posts %}{{post.title | strip_html | strip_newlines}}, {% endfor %}{% else %}{{ page.content | split:'<!--more-->' | first | strip_html | strip_newlines}}{% endif %}" />
+
+    <link rel='alternate' type='application/atom+xml' title='Atom 0.3' href='{{ base_url  | prepend: site.url  }}/feed.xml'>  
+    {% if page.path contains '_posts' %}
+        <link rel="amphtml" href="{{ page.url | prepend: '/amp' | prepend: site.baseurl | prepend: site.url }}">
+    {% endif %}
+    <meta property="fb:pages" content="723765027695367" />
+    <meta name="p:domain_verify" content="687913694e169a9c7052e36857586185"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ base_url  | prepend: site.url}}/libs/img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ base_url  | prepend: site.url}}/libs/img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ base_url  | prepend: site.url}}/libs/img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ base_url  | prepend: site.url}}/libs/img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ base_url  | prepend: site.url}}/libs/img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ base_url  | prepend: site.url}}/libs/img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ base_url  | prepend: site.url}}/libs/img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ base_url  | prepend: site.url}}/libs/img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ base_url  | prepend: site.url}}/libs/img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="{{ base_url  | prepend: site.url}}/libs/img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ base_url  | prepend: site.url}}/libs/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ base_url  | prepend: site.url}}/libs/img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ base_url  | prepend: site.url}}/libs/img/favicon-16x16.png">
+    <link rel="manifest" href="{{ base_url  | prepend: site.url}}/libs/img/manifest.json">
+    <link rel="canonical" href="{{page.url  | prepend: base_url  | prepend: site.url}}" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ base_url  | prepend: site.url}}/feed.xml" />
+
+   <link href="{{ base_url  | prepend: site.url}}/libs/css/blog.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->

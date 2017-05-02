@@ -1,0 +1,53 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing these this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: "Blog O'seeds"
+email: julien@o-seeds.com
+description: "Green lifestyle, Nature et plantes au quotidien"
+author: Claire MAJOREK
+baseurl: ""
+url: https://blog.o-seeds.fr
+logo: /libs/img/amp-logo.png
+github_username:  oseeds
+twitter_username: O_seeds
+twitter_url: https://twitter.com/o_seeds
+facebook_page: o.seeds.shop
+facebook_url: https://www.facebook.com/o.seeds.shop/
+pinterest_page: Oseeds
+pinterest_url: https://fr.pinterest.com/Oseeds/
+instagram_username: O-seeds
+instagram_url: https://www.instagram.com/blog.o.seeds/
+publisher: "O'seeds"
+
+adresse: 26 rue de la gare 57160 Moulins-Lès-Metz
+tel: +33 7 84 34 22 55
+
+
+# Build settings
+permalink: pretty
+paginate: 5
+paginate_path: "page:num/"
+
+markdown: kramdown
+theme: minima
+gems:
+  - jekyll-paginate
+  - jekyll-sitemap
+  
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+ampdir: amp

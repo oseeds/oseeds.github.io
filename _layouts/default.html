@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   {% include head.html %}
+</head>
+<body id="page-top" class="index">
+    {% include nav.html %}
+  {% include header-default.html %}
+         {% if page.style <> 404 %}
+        <div class="container">
+        <section id="article"  class="col-md-10 col-sm-12">
+            {{ content  }}
+        </section>
+            {% include tag-list.html %}  
+        </div>
+        {% endif %}
+     {% include footer.html %}
+</body>
+</html>

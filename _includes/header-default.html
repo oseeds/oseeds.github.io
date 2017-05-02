@@ -1,0 +1,22 @@
+ <header style="background-image:url('{{ page.couverture }}');">
+        <div class="container">
+            <h1 class="intro-article">
+                {% if page.style <> 404 %} <a href="#article" class="page-scroll">{% else %}<a href="{{site.url}}">{% endif %}
+                <div class="intro-heading">
+                    {% if page.filterByTag %}{{page.filterByTag}}
+                    {% elsif page.filterByCat %}{{page.filterByCat}}
+                    {% else %}{{page.title}}{% endif %}
+                </div>
+               {% if  page.date %}  
+                     <div class="date-heading">{% assign m = page.date | date: "%-m" %}{{ page.date | date: "%-d" }}
+                      {% case m %}{% when '1' %}janvier{% when '2' %}février{% when '3' %}mars{% when '4' %}avril{% when '5' %}mai{% when '6' %}juin{% when '7' %}juillet{% when '8' %}août{% when '9' %}septembre{% when '10' %}octobre{% when '11' %}novembre{% when '12' %}décembre{% endcase %}{{ page.date | date: "%Y" }}</div>
+                {% endif %}
+                {% if page.style <> 404 %}
+                <div class="plus-heading"><span>En savoir plus</span></div>
+                {% else %}
+                <div class="plus-heading"><span>Revenir à l'accueil</span></div>
+                {% endif %}
+                </a>
+            </h1>
+        </div>
+</header>

@@ -1,0 +1,16 @@
+---
+layout: post
+title:  "A l'atelier "
+author: claire
+date: 2016-09-13 17:11:47 +0200
+categories: Actualites	Recyclage
+tags: grainotheque	semi
+style: breve
+couverture: https://img.o-seeds.fr/atelier-3.jpg
+---
+
+Julien met la main à la pâte pour créer un objet unique lié au jardinage! Curieux et passionnés de JARDINS, Likez notre page pour suivre l'actu! Bientôt dans les plus beaux jardins de France (on croise les doigts) 
+
+<!--more-->
+
+![1](https://img.o-seeds.fr/atelier.jpg)

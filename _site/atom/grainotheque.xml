@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <generator uri="http://jekyllrb.com" version="3.4.3">Jekyll</generator>
+  <link href="http://localhost:4000/atom/grainotheque.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2017-05-02T16:27:00+02:00</updated>
+  <id>http://localhost:4000/</id>
+
+  
+
+  
+    <subtitle>Green lifestyle, Nature et plantes au quotidien</subtitle>
+  
+
+  
+    <author>
+      
+        <name>Claire MAJOREK</name>
+      
+      
+      
+    </author>
+  
+
+  
+  
+      <entry>
+        <title>A l’atelier</title>
+        <link href="http://localhost:4000/actualites/recyclage/2016/09/13/atelier/" rel="alternate" type="text/html" title="A l'atelier " />
+        <published>2016-09-13T17:11:47+02:00</published>
+        
+          <updated>2016-09-13T17:11:47+02:00</updated>
+        
+
+        <id>http://localhost:4000/actualites/recyclage/2016/09/13/atelier</id>
+        <content type="html" xml:base="http://localhost:4000/actualites/recyclage/2016/09/13/atelier/">&lt;p&gt;Julien met la main à la pâte pour créer un objet unique lié au jardinage! Curieux et passionnés de JARDINS, Likez notre page pour suivre l’actu! Bientôt dans les plus beaux jardins de France (on croise les doigts)&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.o-seeds.fr/atelier.jpg&quot; alt=&quot;1&quot; /&gt;&lt;/p&gt;
+</content>
+
+        
+          <author>
+            
+              <name>claire</name>
+            
+            
+            
+          </author>
+        
+
+        
+
+        
+          <category term="grainotheque" />
+        
+          <category term="semi" />
+        
+
+        
+          <summary>Julien met la main à la pâte pour créer un objet unique lié au jardinage! Curieux et passionnés de JARDINS, Likez notre page pour suivre l’actu! Bientôt dans les plus beaux jardins de France (on croise les doigts)</summary>
+        
+      </entry>
+  
+</feed>

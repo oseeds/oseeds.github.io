@@ -1,0 +1,20 @@
+
+              <aside class="col-md-2 hidden-xs hidden-sm" >
+                  
+                  
+                  
+                    {% if page.filterByTag or page.filterByCat %}
+                  <div class="RSS-link">
+                        <p>
+                            {% if page.filterByTag %}{% assign tag = page.filterByTag %}{% else %}{% assign tag = page.filterByCat %}{% endif %}
+                            <a href="{{ base_url  | prepend: site.url}}/atom/{{ tag | slugize }}.xml"><i class="fa fa-rss" aria-hidden="true"></i> Suivre ce sujet</p></a>
+                  </div>
+                    {% endif %}
+                  <div class="tags-list">
+                   <h3> Tags</h3>
+                      <ul>
+                            {% assign tags = site.tags | sort %}
+                            {% for tag in tags %}{% if  tag.last.size > 1 %}<li><a href="{{ base_url  | prepend: site.url}}/tag/{{ tag | first | slugize }}/">{{ tag[0] | replace:'_', ' ' }}</a></li>{% endif %}{% endfor %}
+                      </ul>
+                      </div>
+            </aside>

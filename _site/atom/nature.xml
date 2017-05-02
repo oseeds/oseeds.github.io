@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <generator uri="http://jekyllrb.com" version="3.4.3">Jekyll</generator>
+  <link href="http://localhost:4000/atom/nature.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2017-05-02T16:27:00+02:00</updated>
+  <id>http://localhost:4000/</id>
+
+  
+
+  
+    <subtitle>Green lifestyle, Nature et plantes au quotidien</subtitle>
+  
+
+  
+    <author>
+      
+        <name>Claire MAJOREK</name>
+      
+      
+      
+    </author>
+  
+
+  
+  
+      <entry>
+        <title>Branches d’arbres et créations futées</title>
+        <link href="http://localhost:4000/idees_deco/original/2016/12/24/branche/" rel="alternate" type="text/html" title="Branches d'arbres et créations futées" />
+        <published>2016-12-24T10:30:00+01:00</published>
+        
+          <updated>2016-12-24T10:30:00+01:00</updated>
+        
+
+        <id>http://localhost:4000/idees_deco/original/2016/12/24/branche</id>
+        <content type="html" xml:base="http://localhost:4000/idees_deco/original/2016/12/24/branche/">&lt;p&gt;&lt;img src=&quot;https://img.o-seeds.fr/branche-1_mini.jpg&quot; alt=&quot;1&quot; /&gt;
+&lt;img src=&quot;https://img.o-seeds.fr/branche-2_mini.jpg&quot; alt=&quot;2&quot; /&gt;
+&lt;img src=&quot;https://img.o-seeds.fr/branche-3_mini.jpg&quot; alt=&quot;3&quot; /&gt;
+&lt;img src=&quot;https://img.o-seeds.fr/branche-4_mini.jpg&quot; alt=&quot;4&quot; /&gt;
+&lt;img src=&quot;https://img.o-seeds.fr/branche-5_mini.jpg&quot; alt=&quot;5&quot; /&gt;
+&lt;img src=&quot;https://img.o-seeds.fr/branche-6_mini.jpg&quot; alt=&quot;6&quot; /&gt;
+&lt;img src=&quot;https://img.o-seeds.fr/branche-7_mini.jpg&quot; alt=&quot;7&quot; /&gt;
+&lt;img src=&quot;https://img.o-seeds.fr/branche-8_mini.jpg&quot; alt=&quot;8&quot; /&gt;
+&lt;img src=&quot;https://img.o-seeds.fr/branche-9_mini.jpg&quot; alt=&quot;9&quot; /&gt;
+&lt;img src=&quot;https://img.o-seeds.fr/branche-10_mini.jpg&quot; alt=&quot;10&quot; /&gt;
+&lt;img src=&quot;https://img.o-seeds.fr/branche-11_mini.jpg&quot; alt=&quot;11&quot; /&gt;
+&lt;img src=&quot;https://img.o-seeds.fr/branche-12_mini.jpg&quot; alt=&quot;12&quot; /&gt;
+&lt;img src=&quot;https://img.o-seeds.fr/branche-13_mini.jpg&quot; alt=&quot;13&quot; /&gt;&lt;/p&gt;
+</content>
+
+        
+          <author>
+            
+              <name>claire</name>
+            
+            
+            
+          </author>
+        
+
+        
+
+        
+          <category term="nature" />
+        
+          <category term="recup" />
+        
+          <category term="design" />
+        
+
+        
+          <summary></summary>
+        
+      </entry>
+  
+</feed>

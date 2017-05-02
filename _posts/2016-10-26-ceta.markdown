@@ -1,0 +1,28 @@
+---
+layout: post
+title:  "Extrait d'interview à Le soir « Refuser le Ceta, c'est donner une chance à l'Europe » "
+author: julien
+date: 2016-10-26 16:11:47 +0200
+categories: Actualites	Environnement
+tags: CETA
+style: breve
+couverture: https://img.o-seeds.fr/ceta-manifestation.jpg
+---
+
+
+Juste un peu de bon sens... que les gens passe avant les lobby
+
+**"Le CETA est un exemple d'incohérence. Préférons le juste échange au libre échange."**
+<!--more-->
+
+
+![Nicolas hulot](https://img.o-seeds.fr/ceta-nicolas-hulot.png)
+
+[http://www.fondation-nicolas-hulot.org/magazine/refuser-le-ceta-cest-donner-une-chance-leurope}(http://www.fondation-nicolas-hulot.org/magazine/refuser-le-ceta-cest-donner-une-chance-leurope)
+
+---
+
+## pour en savoir plus sur le CETA, une vidéo explicative
+
+
+{% youtube oOJ8pVuP2V8 %}

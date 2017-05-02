@@ -1,0 +1,10 @@
+# style d'article
+article: 
+    icon: fa-pencil
+gallery: 
+    icon: fa-picture-o
+404:
+    icon: fa-pencil
+question:
+    icon: fa-comments
+   

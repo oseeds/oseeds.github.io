@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <generator uri="http://jekyllrb.com" version="3.4.3">Jekyll</generator>
+  <link href="http://localhost:4000/atom/mur.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2017-05-02T16:27:00+02:00</updated>
+  <id>http://localhost:4000/</id>
+
+  
+
+  
+    <subtitle>Green lifestyle, Nature et plantes au quotidien</subtitle>
+  
+
+  
+    <author>
+      
+        <name>Claire MAJOREK</name>
+      
+      
+      
+    </author>
+  
+
+  
+  
+      <entry>
+        <title>10 idées créatives d’aménagements muraux pour plantes…</title>
+        <link href="http://localhost:4000/idees_deco/2016/09/26/mur-plantes/" rel="alternate" type="text/html" title="10 idées créatives d'aménagements muraux pour plantes..." />
+        <published>2016-09-26T17:11:47+02:00</published>
+        
+          <updated>2016-09-26T17:11:47+02:00</updated>
+        
+
+        <id>http://localhost:4000/idees_deco/2016/09/26/mur-plantes</id>
+        <content type="html" xml:base="http://localhost:4000/idees_deco/2016/09/26/mur-plantes/">&lt;p&gt;&lt;img src=&quot;https://img.o-seeds.fr/mur-vegetaux-1.jpg&quot; alt=&quot;1&quot; /&gt;
+&lt;img src=&quot;https://img.o-seeds.fr/mur-vegetaux-2.jpg&quot; alt=&quot;2&quot; /&gt;
+&lt;img src=&quot;https://img.o-seeds.fr/mur-vegetaux-3.jpg&quot; alt=&quot;3&quot; /&gt;
+&lt;img src=&quot;https://img.o-seeds.fr/mur-vegetaux-4.jpg&quot; alt=&quot;4&quot; /&gt;
+&lt;img src=&quot;https://img.o-seeds.fr/mur-vegetaux-5.jpg&quot; alt=&quot;5&quot; /&gt;
+&lt;img src=&quot;https://img.o-seeds.fr/mur-vegetaux-6.jpg&quot; alt=&quot;6&quot; /&gt;
+&lt;img src=&quot;https://img.o-seeds.fr/mur-vegetaux-7.jpg&quot; alt=&quot;7&quot; /&gt;
+&lt;img src=&quot;https://img.o-seeds.fr/mur-vegetaux-8.jpg&quot; alt=&quot;8&quot; /&gt;
+&lt;img src=&quot;https://img.o-seeds.fr/mur-vegetaux-9.jpg&quot; alt=&quot;9&quot; /&gt;
+&lt;img src=&quot;https://img.o-seeds.fr/mur-vegetaux-10.jpg&quot; alt=&quot;10&quot; /&gt;
+&lt;img src=&quot;https://img.o-seeds.fr/mur-vegetaux-11.jpg&quot; alt=&quot;11&quot; /&gt;&lt;/p&gt;
+</content>
+
+        
+          <author>
+            
+              <name>claire</name>
+            
+            
+            
+          </author>
+        
+
+        
+
+        
+          <category term="plante" />
+        
+          <category term="mur" />
+        
+          <category term="design" />
+        
+
+        
+          <summary></summary>
+        
+      </entry>
+  
+</feed>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <generator uri="http://jekyllrb.com" version="3.4.3">Jekyll</generator>
+  <link href="http://localhost:4000/atom/citrouille.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2017-05-02T16:27:00+02:00</updated>
+  <id>http://localhost:4000/</id>
+
+  
+
+  
+    <subtitle>Green lifestyle, Nature et plantes au quotidien</subtitle>
+  
+
+  
+    <author>
+      
+        <name>Claire MAJOREK</name>
+      
+      
+      
+    </author>
+  
+
+  
+  
+      <entry>
+        <title>Inspiration Halloween au jardin</title>
+        <link href="http://localhost:4000/idees_deco/enfants/original/2016/10/25/halloween/" rel="alternate" type="text/html" title="Inspiration Halloween au jardin" />
+        <published>2016-10-25T16:11:47+02:00</published>
+        
+          <updated>2016-10-25T16:11:47+02:00</updated>
+        
+
+        <id>http://localhost:4000/idees_deco/enfants/original/2016/10/25/halloween</id>
+        <content type="html" xml:base="http://localhost:4000/idees_deco/enfants/original/2016/10/25/halloween/">&lt;p&gt;&lt;img src=&quot;https://img.o-seeds.fr/arbre-noir.jpg&quot; alt=&quot;1&quot; /&gt;
+&lt;img src=&quot;https://img.o-seeds.fr/arbre-yeux.jpg&quot; alt=&quot;2&quot; /&gt;
+&lt;img src=&quot;https://img.o-seeds.fr/courge-dellamorte.jpg&quot; alt=&quot;3&quot; /&gt;
+&lt;img src=&quot;https://img.o-seeds.fr/courge-lune.jpg&quot; alt=&quot;4&quot; /&gt;
+&lt;img src=&quot;https://img.o-seeds.fr/courge-luxe.jpg&quot; alt=&quot;5&quot; /&gt;
+&lt;img src=&quot;https://img.o-seeds.fr/courge-percer.jpg&quot; alt=&quot;6&quot; /&gt;
+&lt;img src=&quot;https://img.o-seeds.fr/courge-tetedemort.jpg&quot; alt=&quot;7&quot; /&gt;
+&lt;img src=&quot;https://img.o-seeds.fr/minijardin-patisson.jpg&quot; alt=&quot;8&quot; /&gt;
+&lt;img src=&quot;https://img.o-seeds.fr/monstre-bois.jpg&quot; alt=&quot;9&quot; /&gt;
+&lt;img src=&quot;https://img.o-seeds.fr/patisson-chauvesouris.jpg&quot; alt=&quot;10&quot; /&gt;
+&lt;img src=&quot;https://img.o-seeds.fr/pot-squelette.jpg&quot; alt=&quot;11&quot; /&gt;&lt;/p&gt;
+</content>
+
+        
+          <author>
+            
+              <name>claire</name>
+            
+            
+            
+          </author>
+        
+
+        
+
+        
+          <category term="halloween" />
+        
+          <category term="citrouille" />
+        
+          <category term="octobre" />
+        
+
+        
+          <summary></summary>
+        
+      </entry>
+  
+</feed>

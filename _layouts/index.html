@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   {% include head.html %}
+</head>
+<body id="page-top" class="index">
+   {% include nav.html %}
+    {% if paginator.previous_page  %}
+  {% include header-archive.html %}
+    {% else %}
+  {% include header-home.html %}
+    {% endif %}
+    <!-- Services Section -->
+    
+        <div class="container">
+  
+    <section id="blog"  class="col-md-10 col-sm-12">
+        
+       {% assign posts = paginator.posts %}
+        
+        
+     {% include liste-post.html %}
+        
+                <div class="prevsuiv row">
+                     {% if paginator.previous_page  %}
+                    <a href="{{ paginator.previous_page_path }}" class="col-md-2  col-md-offset-3"><span>Prev</span></a>
+                  {% else %}
+                    <div  class="col-md-2  col-md-offset-3"></div>
+                  {% endif %}
+                  {% if paginator.next_page %}
+                    <a href="{{ paginator.next_page_path }}" class="col-md-2  col-md-offset-5"><span>Next</span></a>
+                  {% else %}
+                    <div class="col-md-2  col-md-offset-5">Next</div>
+                  {% endif %} 
+                </div>
+        
+    </section>
+     {% include tag-list.html %}
+    </div>
+     {% include footer.html %}
+</body>
+</html>

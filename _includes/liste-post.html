@@ -1,0 +1,115 @@
+{% for post in posts %}
+        
+             {% assign style = site.data.styles[post.style] %}
+            
+            <article class="row">
+                <div class="col-sm-3 rightAlign">
+                   <span class="type-post"><a href=""><i class="fa {{style.icon}}"></i></a></span>
+                    <span class="date-post">
+                    
+                    {% assign m = post.date | date: "%-m" %}
+                      {{ post.date | date: "%-d" }}
+                       {% case m %}{% when '1' %}janvier{% when '2' %}février{% when '3' %}mars{% when '4' %}avril{% when '5' %}mai{% when '6' %}juin{% when '7' %}juillet{% when '8' %}août{% when '9' %}septembre{% when '10' %}octobre{% when '11' %}novembre{% when '12' %}décembre{% endcase %}
+                      {{ post.date | date: "%Y" }}
+                        
+                        
+                    
+                    </span>
+                    <div class="cat-list"> 
+                        <ul>
+                            {% for cat in post.categories %} 
+                             <li><a href="{{ base_url  | prepend: site.url}}/categories/{{ cat | slugize}}/">{{cat  | replace:'_',' '}}</a></li>
+                            {% endfor %}
+                        </ul> 
+                    </div> 
+                    <div class="tags-list">
+                        <ul >
+                            {% for tags in post.tags %} 
+                             <li><a href="{{ base_url  | prepend: site.url}}/tag/{{ tags | slugize}}/">{{tags  | replace:'_',' '}}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                
+                </div>
+         
+            
+                <div  class="col-sm-9 ">
+                    <a href="{{ base_url  | prepend: site.url}}{{post.url}}" class="nounderline">
+                      {% if  post.style == "article" or  post.style == "breve" or  post.style == "question" %}  
+                        {% assign foundImage = 0 %}
+                          {% assign images = post.content | split:"<img " %}
+                          {% for image in images %}
+                            {% if image contains 'src' %}
+                                {% if foundImage == 0 %}
+                                    {% assign html = image | split:"/>" | first %}
+                                    <img {{ html }}  class="section-img"/>
+                                    {% assign foundImage = 1 %}
+                                {% endif %}
+                           
+                        
+                                
+                            {% endif %}
+                          {% endfor %}
+                            {% if images[1] == null and  foundImage == 0 %}
+                                    <img src="{{post.couverture}}" class="section-img"/>
+                            {% endif %}
+                        
+                        
+                        {% endif %}
+                        
+                        
+                    <h2 class="section-heading">{{post.title}}</h2></a>
+                    
+                    {% if  post.style == "article" or  post.style == "breve" %}
+                    
+                    
+                            
+                        {% if  post.content contains '<!--more-->' %}
+                    
+                                
+                                {{ post.content | split:'<!--more-->' | first }}
+                               
+                        {% elsif post.excerpt %}
+                    
+                           <p> {{ post.excerpt }}</p>
+                        {% else %}
+                           {{ post.content | truncate: 255}}
+                        {% endif %}
+                    
+
+                    {% elsif post.style == "gallery" %}
+
+                        <div class="grid">
+
+                                <div class="grid-sizer"></div>
+                            
+                            
+                                {% assign foundImage = 0 %}
+                                  {% assign images = post.content | split:"<img " %}
+                                  {% for image in images %}
+                                    {% if image contains 'src' %}
+
+                                        {% if foundImage  < 6 %}
+                                            {% assign html = image | split:"/>" | first %}
+                                            <div class="grid-item"><img {{ html }}  /></div>
+                                            {% assign foundImage = foundImage | plus:'1' %}
+                                        {% endif %}
+                            
+                            
+                                    {% endif %}
+                                  {% endfor %}
+                            
+                            
+                            </div>
+
+
+
+                    {% else %}
+                    
+                    {% endif %}
+                </div>
+            </article>
+        
+        
+            
+          {% endfor %}

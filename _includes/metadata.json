@@ -1,0 +1,33 @@
+
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "@id": "{{page.url | prepend: base_url | prepend: site.url }}",
+  "mainEntityOfPage": "{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}",
+  "headline": "{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}",
+  "datePublished": "{% if page.date %}{{ page.date | date_to_xmlschema }}{% else %}{{ site.time | date_to_xmlschema }}{% endif %}",
+  "dateModified": "{% if page.date %}{{ page.date | date_to_xmlschema }}{% else %}{{ site.time | date_to_xmlschema }}{% endif %}",
+  "description": "{% if page.style == 'gallery' %}Galerie d'image {{page.title}} {% elsif page.body %} {{page.body | split:'<!--more-->' | first | markdownify  | truncatewords: 300 | strip_html | strip_newlines}}{% else %}{{page.content | split:'<!--more-->' | first | markdownify | truncatewords: 300 | strip_html | strip_newlines}}{% endif %}",
+  "articleBody": "{% if page.style == 'gallery' %}Galerie d'image {{page.title}} {% elsif page.body %} {{page.body | markdownify  | truncatewords: 300 | strip_html | strip_newlines}}{% else %}{{page.content | markdownify | truncatewords: 300 | strip_html | strip_newlines}}{% endif %}",
+  "mainEntityOfPage": "True",{% assign author = site.data.authors[page.author] %}{% if author %}
+  "author": {
+    "@type": "Person",
+     "name": "{{ author.name }}"
+  },{% endif %}
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ site.title }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.logo | prepend: site.baseurl | prepend: site.url }}",
+      "width": 60,
+      "height": 60
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "{{page.couverture }}",
+    "height": 1920,
+    "width": 1080
+  }
+}

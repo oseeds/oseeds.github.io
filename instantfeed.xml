@@ -1,0 +1,94 @@
+---
+---
+<?xml version="1.0" encoding="UTF-8"?>
+{% assign url_base = site.url %}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.title | xml_escape }}</title>
+    <description>{{ site.description | xml_escape }}</description>
+    <link>{{ base_url  | prepend: site.url}}/</link>
+    <atom:link href="{{ "/instantfeed.xml" | prepend: url_base }}" rel="self" type="application/rss+xml" />
+    <updated>{{ site.time | date_to_xmlschema }}</updated>
+    <id>{{ site.url }}</id>
+    <author>
+      <name>{{ site.author }}</name>
+    </author>
+    {% for post in site.posts limit:30 %}
+      {% if post.style == "article" %}
+      <item>
+        <title>{{ post.title | xml_escape }}</title>
+        <link>{{ post.url | prepend: url_base }}</link>
+        <guid isPermaLink="true">{{ post.url | prepend: url_base }}</guid>
+        <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+        {% assign author = site.data.authors[post.author] %} 
+        {% if author %}
+            <author>{{ author.name }}</author>
+        {% else %}
+            <author>{{ site.author }}</author>
+        {% endif %}
+        {% if post.content contains '<!--more-->'%}
+          <description>{{ post.content | split:'<!--more-->' | first | strip_html | strip_newlines | xml_escape }}</description>
+        {% elsif post.excerpt %}
+          <description>{{ post.excerpt | xml_escape }}</description>
+        {% else %}
+          <description>galerie {{ post.title | xml_escape }}</description>
+        {% endif %}
+        <content:encoded>
+            <![CDATA[
+                <!doctype html>
+                <html lang="en" prefix="op: http://media.facebook.com/op#">
+              <head>
+                <meta charset="utf-8">
+                <link rel="canonical" href="{{ post.url | prepend: url_base }}">
+                <meta property="op:markup_version" content="v1.0">
+              </head>
+              <body>
+                <article>
+                  <header>
+                      <h1>{{ post.title | xml_escape }}</h1>
+                      {% if post.couverture %}
+                      <figure>
+                          <img src="{{ post.couverture }}" alt=" {{ post.title }} ">
+                          <figcaption>{{ post.title }}</figcaption>
+                      </figure>
+                      {% else %}
+                      <figure>
+                          <img src="{{ site.baseurl | prepend: site.inline }}/libs/img/couv-facebook.png" alt=" {{ post.title }} ">
+                          <figcaption>{{ post.title }}</figcaption>
+                      </figure>
+                      {% endif %}
+                      <time class="op-published" dateTime="{{ post.date | date: "%Y-%m-%d %H:%M:%S %Z" }}">{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</time>
+                      <time class="op-modified" dateTime="{{ post.modified | date: "%Y-%m-%d %H:%M:%S %Z" }}">{{ post.modified }}</time>
+                  </header>
+                  {% if post.instantfeedback %}
+                    {{ post.content | replace: '<figure>', '<figure data-feedback="fb:likes">' }}
+                  {% else %}
+                    {{ post.content | replace: '<p><img src="','<img src="' | replace: '" /></p>','" />' | replace: 'h2','h1' | replace: 'h3','h2' | replace: 'h4','h2' }}
+                  {% endif %}
+                    <footer>
+                        <aside>
+                           {% assign author = site.data.authors[post.author] %} 
+                                {% if author %}
+                                    {{ author.name }}<br />{{ author.function }}
+                                {% else %}
+                                    {{ site.author }}
+                                {% endif %}
+
+
+                            {% if post.author %}
+                              {{ post.credit }}.<br />
+                            {% endif %}
+                        </aside>
+                        <small>Copyright - O'seeds</small>
+                  </footer>
+                </article>
+              </body>
+            </html>
+        ]]>
+        </content:encoded>
+          
+      </item>
+      {% endif %}
+    {% endfor %}
+  </channel>
+</rss>

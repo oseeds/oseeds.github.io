@@ -1,0 +1,10 @@
+---
+layout: default
+couverture: https://img.o-seeds.fr/abeille-lavande.jpg
+---
+
+{% if page.filterByTag %}{% assign posts = site.tags[page.filterByTag]%}{% else %}{% assign posts = site.posts %}{% endif %}
+
+
+{% include liste-post.html %}
+     
