@@ -24,5 +24,3 @@ Juste un peu de bon sens... que les gens passe avant les lobby
 
 ## pour en savoir plus sur le CETA, une vidéo explicative
 
-
-{% youtube oOJ8pVuP2V8 %}
