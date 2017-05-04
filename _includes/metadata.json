@@ -1,6 +1,6 @@
 
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@type": "BlogPosting",
   "@id": "{{page.url | prepend: base_url | prepend: site.url }}",
   "mainEntityOfPage": "{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}",
